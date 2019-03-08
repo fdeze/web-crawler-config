@@ -16,4 +16,4 @@ spring:
       - id: apec
         predicates:
         - Path=/getOffers/**
-        uri: lb://APEC-MICROSERVICE/**
+        uri: APEC-MICROSERVICE/**
