@@ -13,7 +13,7 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-      - id: users
+      - id: apec
         predicates:
-        - Path=/users/**
-        uri: lb://PHOTOAPPAPI-USERS/users
+        - Path=/getOffers/**
+        uri: lb://APEC-MICROSERVICE/**
