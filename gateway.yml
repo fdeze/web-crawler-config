@@ -17,3 +17,13 @@ spring:
         predicates:
         - Path=/getOffers/**
         uri: APEC-MICROSERVICE/**
+hystrix:
+  command:
+    myCommandName:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds:
+              30000
+
+        
