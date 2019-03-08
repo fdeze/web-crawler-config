@@ -3,9 +3,9 @@ eureka:
     fetchRegistry: false
     registerWithEureka: false
     serviceUrl:
-      defaultZone: http://localhost:9102/eureka/
+      defaultZone: http://localhost:8761/eureka/
 server:
-  port: 9102
+  port: 8761
 spring:
   application:
     name: eureka-server
