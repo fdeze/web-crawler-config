@@ -1,0 +1,22 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9102/eureka
+server:
+  port: 8080
+spring:
+  application:
+    name: ApiGateway
+  cloud:
+    config:
+    uri: http://localhost:8888 
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      - id: users
+        predicates:
+        - Path=/users/**
+        uri: lb://PHOTOAPPAPI-USERS/users
