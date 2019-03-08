@@ -17,6 +17,8 @@ spring:
         predicates:
         - Path=/getOffers/**
         uri: APEC-MICROSERVICE/**
+        filters:
+        - Hystrix=myCommandName
 hystrix:
   command:
     myCommandName:
