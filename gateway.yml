@@ -10,7 +10,13 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: true    
+      routes:          
+      - id: albums
+      uri: lb://APEC-MICROSERVICE
+      predicates:
+        - Path=/emploi/**      
+          
 management:
   endpoints:
     web:
