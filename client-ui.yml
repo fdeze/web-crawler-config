@@ -19,3 +19,10 @@ hystrix:
           strategy: THREAD
           thread:
             timeoutInMilliseconds: 20000
+            
+ribbon:
+  ReadTimeout: 8000
+  ConnectTimeout: 8000
+  OkToRetryOnAllOperations: true
+  MaxAutoRetries: 2
+  MaxAutoRetriesNextServer: 2           
