@@ -20,10 +20,8 @@ spring:
         predicates:
         - Path=/getOffers/**
         uri: https:://apec-microservice:9001
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 150000
+management:
+ endpoints: 
+  web:
+   exposure:
+    include:*
