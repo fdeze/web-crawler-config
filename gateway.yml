@@ -13,9 +13,9 @@ spring:
           enabled: true    
       routes:          
       - id: albums
-      uri: lb://APEC-MICROSERVICE
+      uri: lb://apec-microservice/getOffers/apec
       predicates:
-        - Path=/emploi/**      
+        - Path=/getOffers/apec
           
 management:
   endpoints:
