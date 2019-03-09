@@ -21,7 +21,7 @@ spring:
         - Path=/getOffers/**
         uri: https:://apec-microservice:9001
 management:
- endpoints: 
-  web:
-   exposure:
-    include: *
+  endpoints:
+    web:
+      exposure:
+        include: "*"  
