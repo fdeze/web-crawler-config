@@ -4,6 +4,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 server:
   port: 9004
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n" 
 spring:
   application:
     name: ApiGateway
@@ -16,7 +19,7 @@ spring:
       - id: apec
         predicates:
         - Path=/getOffers/**
-        uri: APEC-MICROSERVICE/**
+        uri: https:://apec-microservice:9001
 hystrix:
   command:
     default:
