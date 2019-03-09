@@ -16,10 +16,10 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-      - id: apec
+      - id: offer_route
+        uri: http://baeldung.com
         predicates:
-        - Path=/getOffers/**
-        uri: https:://apec-microservice:9001
+        - Path=/offer/
 management:
   endpoints:
     web:
