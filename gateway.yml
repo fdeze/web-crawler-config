@@ -14,12 +14,25 @@ spring:
       discovery:
         locator:
           enabled: true
-          lower-case-service-id: true
       routes:
-      - id: offer_route
-        uri: http://baeldung.com
+      - id: employee-service
+        uri: lb://employee-service
         predicates:
-        - Path=/offer/
+        - Path=/employee/**
+        filters:
+        - RewritePath=/employee/(?<path>.*), /$\{path}
+      - id: department-service
+        uri: lb://department-service
+        predicates:
+        - Path=/department/**
+        filters:
+        - RewritePath=/department/(?<path>.*), /$\{path}
+      - id: organization-service
+        uri: lb://organization-service
+        predicates:
+        - Path=/organization/**
+        filters:
+        - RewritePath=/organization/(?<path>.*), /$\{path}
 management:
   endpoints:
     web:
