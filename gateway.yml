@@ -6,7 +6,6 @@ server:
   port: 9004 
 spring:
   application:
-    name: ApiGateway
     gateway:
       discovery:
         locator:
