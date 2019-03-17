@@ -1,0 +1,10 @@
+client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 9105
+  boot:
+    admin:
+      discovery:
+        converter:
+          management-context-path: /actuator
