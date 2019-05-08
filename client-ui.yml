@@ -18,7 +18,7 @@ hystrix:
         isolation:
           strategy: THREAD
           thread:
-            timeoutInMilliseconds: 20000
+            timeoutInMilliseconds: 60000
             
 ribbon:
   ReadTimeout: 60000
