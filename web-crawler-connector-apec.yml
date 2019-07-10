@@ -6,8 +6,3 @@ eureka:
     health-check-url-path: /actuator/health
 server:
   port: 9001
-spring:
- security:
-   user:
-    name: utilisateur
-    password: Lam@86
