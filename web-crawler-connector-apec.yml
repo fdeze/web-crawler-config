@@ -6,14 +6,3 @@ eureka:
     health-check-url-path: /actuator/health
 server:
   port: 9001
-  
-spring:
-  boot:
-    admin:
-      client:
-        url: http://localhost:9105  
-management:
-  endpoints:
-    web: 
-      exposure:
-        include: *
