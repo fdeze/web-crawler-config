@@ -6,9 +6,8 @@ eureka:
     health-check-url-path: /actuator/health
 server:
   port: 9006
-server:
-    compression:
-        enabled: true
-        excluded-user-agents: 
+  compression:
+     enabled: true
+      excluded-user-agents:
         mime-types: application/json  
         min-response-size: 2048
