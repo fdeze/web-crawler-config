@@ -18,11 +18,11 @@ hystrix:
         isolation:
           strategy: THREAD
           thread:
-            timeoutInMilliseconds: 120000
+            timeoutInMilliseconds: 180000
             
 ribbon:
-  ReadTimeout: 120000
-  ConnectTimeout: 120000
+  ReadTimeout: 180000
+  ConnectTimeout: 180000
   OkToRetryOnAllOperations: true
   MaxAutoRetries: 1
   MaxAutoRetriesNextServer: 1           
